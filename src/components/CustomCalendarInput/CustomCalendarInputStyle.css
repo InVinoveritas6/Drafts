@@ -1,0 +1,93 @@
+.custom-calendar-input {
+    position: relative;
+}
+
+.rdtPicker {
+    min-width: 280px;
+    min-height: 270px;
+}
+
+.custom-calendar-input-datetime > .rdtPicker,
+.custom-calendar-input-datetime-close > .rdtPicker {
+    position: absolute;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    border-radius: 16px;
+    transition: all 0.3s;
+    font-size: 16px;
+    padding: 0 18px;
+}
+
+.custom-calendar-input-datetime-close > .rdtPicker {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.custom-calendar-input-datetime > .rdtPicker {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom-calendar-input-datetime .rdtDays,
+.custom-calendar-input-datetime-close .rdtDays {
+    flex: 1;
+}
+
+.custom-calendar-input-datetime .rdtDays table,
+.custom-calendar-input-datetime-close .rdtDays table {
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+}
+
+.custom-calendar-input-datetime .rdtDays table thead,
+.custom-calendar-input-datetime-close .rdtDays table thead {
+    cursor: pointer;
+}
+
+.custom-calendar-input-datetime .rdtDays table thead tr:first-child ,
+.custom-calendar-input-datetime-close .rdtDays table thead tr:first-child {
+    color: #9C27B0;
+    height: 50px;
+}
+
+.custom-calendar-input-datetime .rdtDays table thead tr:last-child th,
+.custom-calendar-input-datetime-close .rdtDays table thead tr:last-child th{
+    font-weight: 400;
+    text-transform: uppercase;
+}
+ 
+.custom-calendar-input-datetime .rdtDay,
+.custom-calendar-input-datetime-close .rdtDay {
+    text-align: center;
+    cursor: pointer;
+    width: 40px;
+    height: 34px;
+}
+
+.custom-calendar-input-datetime .rdtDay:hover,
+.custom-calendar-input-datetime-close .rdtDay:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.custom-calendar-input-datetime .rdtDay rdtActive,
+.custom-calendar-input-datetime-close .rdtDay rdtActive {
+    background: red;
+}
+
+.custom-calendar-input-datetime .rdtOld,
+.custom-calendar-input-datetime-close .rdtOld {
+   opacity: 0.3;
+}
+
+.custom-calendar-input-datetime .rdtNew,
+.custom-calendar-input-datetime-close .rdtNew {
+    opacity: 0.3;
+}
+
+.custom-calendar-input-datetime tfoot,
+.custom-calendar-input-datetime-close tfoot {
+    display: none;
+}

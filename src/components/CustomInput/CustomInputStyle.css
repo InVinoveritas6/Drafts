@@ -1,0 +1,70 @@
+.custom-input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 21px;
+}
+
+.custom-input::after {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #AAAAAA;
+    bottom: 0px;
+    transition: all 0.3s;
+}
+
+.custom-input:hover::after {
+    background: #414141;
+}
+
+.custom-input input{
+    all: unset;
+    padding-bottom: 5px;
+    z-index: 2;
+}
+
+.custom-input-label,
+.custom-input-label-focus {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    color: #AAAAAA;
+    z-index: 1;
+    transition: all 0.4s;
+}
+
+.custom-input-label-focus {
+    transform: translate(0px, -21px);
+    font-size: 12px;
+    transition: all 0.4s
+}
+
+.custom-input-span,
+.custom-input-span-focus {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 2px;
+    background: #9C27B0;
+    bottom: 0px;
+    transform: scaleX(0);
+    transition: all 0.4s;
+}
+
+.custom-input-span-focus {
+    transform: scaleX(1);
+    transition: all 0.4s;
+}
+
+.custom-input-label-required {
+    color: red;
+}
+
+.custom-input-span-error {
+    position: absolute;
+    font-size: 10px;
+    color: red;
+    bottom: -15px;
+}
